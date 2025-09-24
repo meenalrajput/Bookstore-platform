@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .duration-high {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 40s linear infinite;
+}
+
+/* smooth scroll*/
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  @apply bg-primary text-white;
+}
+/* Buttons */
+.btn-primary {
+  @apply bg-primary text-white py-2 px-6 rounded-full font-semibold transition duration-300 ease-in-out;
+}
+
+.btn-primary:hover {
+  @apply bg-secondary text-black scale-105;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply transform hover:scale-105 transition duration-300 ease-in-out;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+  @apply fixed right-0 top-0 w-80 h-full bg-white dark:bg-dark shadow-xl p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-50;
+}
+
+.cart-sidebar.open {
+  @apply translate-x-0;
+}
+
+/* Popup animations */
+.popup-enter {
+  @apply opacity-0 scale-90;
+}
+
+.popup-enter-active {
+  @apply opacity-100 scale-100 transition duration-300 ease-in-out;
+}
+
+.popup-exit {
+  @apply opacity-100 scale-100;
+}
+
+.popup-exit-active {
+  @apply opacity-0 scale-90 transition duration-300 ease-in-out;
+}@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .duration-high {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 40s linear infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  @apply bg-primary text-white;
+}
+
+/* Gradient backgrounds for sections */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #1182c5, #2aa6df);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #2aa6df, #1182c5);
+}
