@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import { MongoClient } from "mongodb";
 
 // MongoDB connection string
-const uri = "mongodb+srv://meenaldb-07:meenaldb07@cluster0.qrpzkze.mongodb.net/bookstore?retryWrites=true&w=majority";
+const uri = "mongodb+srv://username:password@cluster0.qrpzkze.mongodb.net/bookstore?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri);
 let db;
@@ -58,3 +58,4 @@ app.get("/orders", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
